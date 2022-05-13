@@ -184,7 +184,7 @@ export default function Game() {
       </div>
       <div id="gameUI">
         <input className={`saber ${saberColor.current}`} onChange={handleEntry} value={userEntry} autoFocus/>
-        <img id="hilt" src={hilt}/>
+        <img id="hilt" src={hilt} alt="lightsaber"/>
         {/* <span style={{position:"absolute"}}>  Errors: {errors}</span> */}
       </div>
     </div>
