@@ -1,13 +1,9 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 
-export default function Leaderboard() {
-  const [jedis, setJedis] = useState([]);
 
-  useEffect(()=>{
-    fetch("https://salty-tor-76776.herokuapp.com/highScores")
-    .then(r=>r.json())
-    .then(setJedis)
-  }, []);
+export default function Leaderboard({jedis}) {
+  console.log(jedis)
+
 
   const renderJediMasters = jedis.sort((a,b)=>{return b.score - a.score})
   .slice(0,10)
@@ -20,7 +16,7 @@ export default function Leaderboard() {
           <td id='swFont' style={{"color": '#FFE81F'}}>{jedi.score}</td>
         </tr>
     )
-  })
+  });
 
   return (
     <div>
